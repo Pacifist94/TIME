@@ -1,0 +1,1740 @@
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+        <title>TIME</title>
+        <style> 
+
+            html,body{ 
+                margin:0; 
+                padding: 0;
+            } 
+            div.topRibbon{
+                background-image: -webkit-linear-gradient(top, #000000, #8c8c8c); 
+                padding: 0px;
+                margin: 0px;
+
+                width: 360px; 
+                height: 50px; 
+                position: fixed;
+                left: 0px;
+                top: 0px;
+               /* border-radius: 10px 10px 0px 0px;*/
+/*
+                  document.getElementById("divTime").style.backgroundImage= "-webkit-linear-gradient(top, #0080ff, #b3d9ff)";
+                  document.getElementById("divTime3").style.backgroundImage= "-webkit-linear-gradient(top, #0080ff, #b3d9ff)";
+                  document.getElementById("divTime4").style.backgroundImage= "-webkit-linear-gradient(top, #0080ff, #b3d9ff)";
+
+red b30000 ff6666 | 330000
+blue = 0059b3 66b3ff |001a33
+green = 00b300 66ff66 |0a090a
+*/
+            }
+            div.panel1{
+                background-image: -webkit-linear-gradient(top,  #0059b3, #66b3ff);
+ 
+                padding: 0px;
+                margin: 0px;
+
+                width: 360px; 
+                height: 88px; 
+                position: fixed;
+                left: 0px;
+                top: 80px;
+              /* border-radius: 10px 10px 0px 0px;*/
+
+
+            }
+
+            
+
+  
+
+            hr {
+                border-color: #fffff0;
+            }
+            
+            input{ /*
+                font-family: "Tahoma"; 
+                font-size: 15px; 
+            */} 
+
+            select{ 
+                font-family: "Tahoma"; 
+                font-size: 15px; 
+            } 
+
+         
+           
+            body { 
+                font-family: "Candara"; 
+                font-size: 18px; 
+                background-color: #000000; 
+                background-size:1982px 1300px; 
+                background-repeat: no-repeat; 
+                color: #FFFFFF; 
+            } 
+
+            button.tabclassBlue{ 
+                background-image: -webkit-linear-gradient(top, #0059b3, #66b3ff); 
+
+                background-color: gray;
+                border-radius: 0px; 
+                /*text-shadow: 2px 4px 4px #ffffff; */
+                font-family: Candara; 
+                color: #FFFFFF; 
+                font-size: 12x; 
+                padding: 0px 0px 0px 0px; 
+                border: solid #001a33 1px;
+                text-decoration: none; 
+                position: fixed;
+            } 
+
+              button.tabclassRed{ 
+                background-image: -webkit-linear-gradient(top, #b30000, #ff6666); 
+
+                background-color: gray;
+                border-radius: 0px; 
+                /*text-shadow: 2px 4px 4px #ffffff; */
+                font-family: Candara; 
+                color: #FFFFFF; 
+                font-size: 12x; 
+                padding: 0px 0px 0px 0px; 
+                border: solid #330000 1px;
+                text-decoration: none; 
+                position: fixed;
+            } 
+            button.tabclassGreen{ 
+                background-image: -webkit-linear-gradient(top, #00b300, #66ff66); 
+
+                background-color: gray;
+                border-radius: 0px; 
+                /*text-shadow: 2px 4px 4px #ffffff; */
+                font-family: Candara; 
+                color: #FFFFFF; 
+                font-size: 12x; 
+                padding: 0px 0px 0px 0px; 
+                border: solid #0a090a 1px;
+                text-decoration: none; 
+                position: fixed;
+            } 
+
+            #btnCompare:hover{ 
+           
+                           /* background-image: -webkit-linear-gradient(top, #b3ffc6, #0066cc); */
+                                text-shadow: 2px 4px 4px #ffffff; 
+
+            }
+
+            #btnCompare { 
+                background-image: -webkit-linear-gradient(top, #0059b3, #66b3ff); 
+
+                background-color: gray;
+                border-radius: 0px; 
+                /*text-shadow: 2px 4px 4px #ffffff; */
+                font-family: Candara; 
+                color: #FFFFFF; 
+                font-size: 12x; 
+                padding: 0px 0px 0px 0px; 
+                border: solid #001a33 1px;
+                text-decoration: none; 
+                position: fixed;
+            } 
+
+            #btnpaste1:hover{
+                background-image: -webkit-linear-gradient(top, #99ffff, #e6ffff); 
+                text-shadow: 2px 4px 4px #ffffff; 
+            }
+            #btnpaste2:hover{
+                background-image: -webkit-linear-gradient(top, #99ffff, #e6ffff); 
+                text-shadow: 2px 4px 4px #ffffff; 
+            }
+
+            button.tabclassBlue:hover { 
+                background-image: -webkit-linear-gradient(top, #b3ffc6, #0066cc); 
+                                text-shadow: 2px 4px 4px #ffffff; 
+
+            }
+            button.tabclassGreen:hover { 
+                background-image: -webkit-linear-gradient(top, #d9ffb3, #00cc00); 
+                                text-shadow: 2px 4px 4px #ffffff; 
+
+            }
+
+            button.tabclassRed:hover { 
+                background-image: -webkit-linear-gradient(top, #ffb3b3, #cc0000); 
+                                text-shadow: 2px 4px 4px #ffffff; 
+
+/*
+red b30000 ff6666 | 330000  | ffb3b3 cc0000
+blue = 0059b3 66b3ff |001a33 | b3ffc6 0066cc
+green = 00b300 66ff66 |0a090a | d9ffb3 00cc00
+*/
+            } 
+            
+            #areaEpin{ 
+                resize:none; 
+            } 
+  
+            input.time{
+                font-family: "Tahoma"; 
+                font-size: 10px ; 
+                height: 20px;
+                padding: 0px;
+            }
+
+            p.other{
+
+                font-family: "Tahoma"; 
+                font-size: 13px ; 
+                height: 20px;
+                color: #000000;
+            }            
+        
+         
+            p.Date1{
+                color: white;
+            }
+            p.Time1{
+                color: white;
+            }
+            p.Date2{
+                color: white;
+            }
+            p.Time2{
+                color: white;
+            }
+            
+
+        </style> 
+
+        <script src="moment.js"></script>
+        <script src="moment-timezone.js"></script>
+        <script src="moment-timezone-with-data.js"></script>
+        <script src="moment-timezone-with-data-2012-2022.js"></script>
+
+        
+        <link href="js/jquery-ui.css" rel="stylesheet">
+        <script type="text/javascript" src = "js/jquery-3.4.1.min.js"></script>
+
+    </head>
+
+    <body onload="fncOnload()">
+    
+    <script src="js/external/jquery/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+<!--       _________________________________         -->
+
+ <div id="topRibbon" class="topRibbon">
+  
+
+  <center>
+    <table border="0" >
+        <tr>
+            <td> 
+                <input  style="width:85px;height:20px" class="time" type="text" id="txtTime1" value=""  readonly />
+            </td>
+            
+            <td>    
+                <input  style="width:85px;height:20px" class="time" type="text" id="txtTime2" value=""  readonly />
+            </td>
+            
+            <td> 
+                <input  style="width:85px;height:20px" class="time" type="text" id="txtTime3" value=""  readonly />  
+            </td>
+            
+            <td>   
+                <input  style="width:85px;height:20px" class="time" type="text" id="txtTime4" value=""  readonly />
+            </td>
+        </tr>
+    
+        <tr>
+            <td>  
+                <input  style="width:85px;height:20px" class="time" type="text" id="txtTime5" value=""  readonly />        
+            </td>
+            <td> 
+                <input  style="width:85px;height:20px" class="time" type="text" id="txtTime6" value=""  readonly />
+            </td>
+            <td>  
+                <input  style="width:85px;height:20px" class="time" type="text" id="txtTime7" value=""  readonly />        
+            </td>
+            <td>   
+                <input  style="width:85px;height:20px" class="time" type="text" id="txtTime8" value=""  readonly />  
+            </td>
+        </tr>
+    </table>
+   </center>
+
+
+<button onclick="tabBlueClick()" class="tabclassBlue" style="width:105px;height:30px;top:50px;left:0px;"> Check Status </button>
+<button onclick="tabRedClick()" class="tabclassRed" style="width:140px;height:30px;top:50px;left:105px;"> Cancelled not by Diner </button>
+<button onclick="tabGreenClick()" class="tabclassGreen" style="width:115px;height:30px;top:50px;left:245px;"> Compare 2 Hours </button>
+
+
+
+<div id="panel1" class="panel1">
+
+<table id="table1" border="0" style="visibility:visible">
+    <tr>
+        <td width="20px">
+            
+        </td>
+        <td width="87px">
+           <p id ="Date1" class ="Date1"> Date:</p>
+        </td>
+        <td colspan="3">
+             <input type="date" id="myDate" style="width:145px;">
+        </td>
+        
+    </tr>
+    <!-- ______________________ -->
+    <tr>
+        <td>
+            
+        </td>
+        <td>
+            <p id ="Time1" class ="Time1"> Original ETA:</p>
+        </td>
+        <td>
+            <input  class="time" type="time" id="myTime"  style="width:85px;height:20px" >
+        </td>
+        <td>
+                    <select id="selectTimeZone" onchange="fncChangeSelect()" >
+                        <option value="Audi" style="color:#006666">HST</option>
+                        <option value="Audi" style="color:#666666">AKDT</option>
+                        <option value="Audi" style="color:#0099ff">PDT | PST</option>
+                        <option value="Audi" style="color:#006600">MST</option>
+                        <option value="Audi" style="color:#00cc00">MDT</option>
+                        <option value="Audi" style="color:#cc9900">CST</option>
+                        <option value="Audi" style="color:#ff9900">CDT</option>
+                        <option value="Audi" style="color:#ff3300">EDT | EST</option>                   
+                    </select>
+
+        </td>
+        <td>
+            <button id="btnPaste1" onclick="fncPaste1()" ><span class="ui-icon ui-icon-clipboard"></span></button>
+            
+        </td>
+    </tr>
+    <!-- ______________________ -->
+    <tr>
+        <td>
+            
+        </td>
+        <td colspan="4">
+            
+     
+    
+    <input onclick="fncChangeCheck()" type="checkbox" name="checkbox-1" id="checkbox-1">
+    <label for="checkbox-1">Add 2nd hour</label>
+
+        </td>
+     
+    </tr>
+
+
+</table>
+
+
+
+
+
+<table id="table2" border="0" style="visibility:hidden">
+<tr>
+    <td width="20px">
+        
+    </td>
+    <td width="87px">
+           <p id ="Date2" class ="Date2"> Date:</p>
+    </td>
+    <td colspan="2" >
+       <input type="date" id="myDate3" style="width:145px;" >
+    </td>
+    
+</tr>
+
+<tr>
+    <td>
+        
+    </td>
+    <td>
+                   <p id ="Time2" class ="Time2"> Fulfilled at:</p>
+
+    </td>
+    <td width="70px">
+        <input  class="time" type="time" id="myTime3"  style="width:85px;height:20px" >
+    </td>
+    <td>
+        <button id="btnPaste2" onclick="fncPaste2()"><span class="ui-icon ui-icon-clipboard"></span></button>
+    </td>
+</tr>
+</table>
+
+<button id="btnCompare" onclick="calcDifference()" style="position:fixed;width:360px;height:30px;top:168px;left:0px;"> Compare to Now </button>
+     
+<input  style="position:fixed;top:350px;width:360px;height:20px" class="time" type="text" id="txtDiff" value="" placeholder="Time Difference" readonly />  
+
+
+<br>
+<br>
+<br>
+<br>
+<p style="color:white" class="other" id="demo" ></p>
+
+<br><br>
+<input  id="txtPaste1" type="text" placeholder="Paste here:" style=" position:fixed;top:112px;left:119px;height:20px;width:180px;visibility:hidden;" >
+<input id="txtPaste2" type="text" placeholder="Paste here:" style=" position:fixed;top:190px;left:119px;height:20px;width:85px;visibility:hidden;">
+
+
+
+                
+     
+                    
+
+</div>
+
+
+       
+
+                       
+
+                     
+
+                      
+
+                       
+
+                      
+
+                     
+</div>
+
+
+
+<!--  divTime   divTime2 divTime3 divTime4 selectTimeType     _________________________________   other2      -->
+
+
+
+
+
+
+    
+
+
+
+
+        <script>
+var BoxChecked = false; 
+var PanelSelected = 1;
+
+var PasteVisible1=false;
+var PasteVisible2=false;
+
+        window.setInterval(function(){
+          myUpdate();
+        }, 1000);
+
+
+
+        function fncOnload()
+        {
+            //Call change of Dropdown
+            fncChange();    
+
+            var date = new Date();
+
+            var day = date.getDate();
+            var month = date.getMonth() + 1;
+            var year = date.getFullYear();
+
+            if (month < 10) month = "0" + month;
+            if (day < 10) day = "0" + day;
+
+            var today = year + "-" + month + "-" + day;       
+            document.getElementById("myDate").value = today;
+            document.getElementById("myDate3").value = today;
+            
+            document.getElementById("myTime").focus();
+            document.getElementById("selectTimeZone").selectedIndex = "7";
+            //$("#txtTime8"   ).css("background-color","#b3f0ff");
+
+            fncChangeSelect();
+
+            /*var arrColor = ["#006666", "#666666", "#0099ff", "#006600", "#00cc00", "#cc9900", "#ff9900", "#ff3300"];
+
+            for (var i = 1 ; i <= 8; i++) {
+  
+                $("#txtTime" + i  ).css("color", arrColor[i-1]);
+                    
+            }*/
+
+            
+
+
+            $("#btnCompare").css("height", "30px");
+            $("#btnCompare").css("font-size", "20px");
+            $("#btnCompare").css("font-family", "Aclonica");
+            $("#btnCompare").css("text-align", "center");
+            $("#btnCompare").css("top", "168px");
+            $("#btnCompare").css("padding-top", "5px");
+
+            $("#txtDiff").css("height", "30px");
+            $("#txtDiff").css("font-size", "20px");
+            $("#txtDiff").css("font-family", "Aclonica");
+            $("#txtDiff").css("text-align", "center");
+            $("#txtDiff").css("top", "198px");
+            $("#txtDiff").css("padding-top", "8px");
+            
+            $("#demo").css("position", "fixed");   
+            $("#demo").css("height", "30px");
+            $("#demo").css("width", "360px");
+            $("#demo").css("font-size", "20px");
+            $("#demo").css("font-family", "Aclonica");
+            $("#demo").css("text-align", "center");
+            $("#demo").css("top", "210px");
+            $("#demo").css("padding-top", "8px");
+            //$("#demo").css("background-color", "#00ffff");   
+
+        }
+
+
+       function fncChangeSelect(){
+        //text color
+      var arrColor = ["#006666", "#666666", "#0099ff", "#006600", "#00cc00", "#cc9900", "#ff9900", "#ff3300"];
+        
+        //back color
+        var arrBackColor = ["#b3ffff", "#d9d9d9", "#b3e0ff", "#b3ffb3", "#b3ffb3", "#ffecb3", "#ffe0b3", "#ffc2b3"];
+          
+        var indexTimeZ = parseInt(document.getElementById("selectTimeZone").selectedIndex);
+
+        for (var i = 1 ; i <= 8; i++) {
+        $("#txtTime" + i  ).css("background-color", "#808080");
+                    
+        //$("#txtTime" + i  ).css("color","red");            
+        $("#txtTime" + i  ).css("color", "#000000");
+        
+        $("#txtTime" + i  ).css("font-size", "10px");
+        $("#txtTime" + i  ).css("text-align", "center");
+        $("#txtTime" + i  ).css("font-weight", "bold");
+
+
+
+        }
+
+        $("#selectTimeZone").css("color", arrColor[indexTimeZ]);
+
+        $("#txtTime" + (indexTimeZ + 1)  ).css("color",arrColor[indexTimeZ]);
+        $("#txtTime" + (indexTimeZ + 1)  ).css("background-color","#ffffff");
+        // $("#txtTime1").css("background-color","blue");
+
+
+
+       }
+
+//--------------------------------------------------------------------------------------------------------------------
+
+document.getElementById("txtPaste2").addEventListener("paste", function(e){
+var clipboardData, pastedData;
+// Get pasted data via clipboard API
+clipboardData = e.clipboardData || window.clipboardData;
+pastedData = clipboardData.getData('Text');
+var inputOk = checkInput2(pastedData);
+if(!inputOk){
+  e.preventDefault();
+}
+});
+
+document.getElementById("txtPaste2").addEventListener("keypress", function(e){
+ 
+
+  var inputOk = checkInput(e.key);
+  if(!inputOk){
+    e.preventDefault();
+  }
+
+
+});
+//-----------------------------------------------------------------------------
+
+function checkInput2(value){ // HERE MY ONPASTE EVENT
+
+
+
+
+
+    var res = value.split(" ");
+    //res[0] = "Sat,"
+    //res[1] = "Feb,"
+    //res[2] = "29"
+    //res[3] = "@"
+    //res[4] = "9:14"
+    //res[5] = "pm"
+    //res[6] = "EST"
+
+   // alert(res.length);
+
+    if (res.length == 7) { // First Format "Sat, Feb 29 @ 9:14 pm EST" _______________________________________________________________
+
+
+        var time_mine = res[4];
+
+        if (res[5] =="pm") {
+            var res2 = time_mine.split(":");
+            var suma;
+
+            if (res2[0] == "12") { // is 12:00 pm
+                suma = parseInt(res2[0]);
+            }
+            else { // is not 12:00 pm
+                suma = parseInt(res2[0]) + 12;
+            }
+       
+            time_mine = suma + ":" + res2[1];
+        }
+        else { //am
+
+            var res3 = time_mine.split(":");
+            var addition ="";
+
+            if (res3[0].length == 1) {//1 digit hour
+                addition = "0" + res3[0];
+                //alert("1 digit");
+            }
+            else {//2 digits hour
+            
+                if (res3[0]=="12") {// is 12:00 am
+                    addition = "00";    
+                }
+                else{
+                    addition = "" + res3[0];
+                }
+                //alert("2 digit");
+            }
+
+            time_mine = addition + ":" + res3[1];
+        }
+
+        //alert(time_mine);
+        document.getElementById("myTime3").value = time_mine;
+
+        //------------------- DATE                       
+        //res[1] = "Feb"
+        //res[2] = "29"
+
+        var my_year = document.getElementById("myDate").value;
+        
+        my_year  = my_year.substring(4, 0); // 2020
+
+        var my_month = "";
+
+        var my_day = res[2];
+
+        if (my_day.length == 1) {
+           my_day = "0" + my_day;
+        }
+        
+
+
+        switch(res[1]) {
+            case "Jan":
+                my_month = "01";
+            break;
+          
+            case "Feb":
+                my_month = "02";
+            break;
+          
+            case "Mar":
+                my_month = "03";
+            break;
+          
+            case "Apr":
+                my_month = "04";
+            break;
+          
+            case "May":
+                my_month = "05";
+            break;
+          
+            case "Jun":
+                my_month = "06";
+            break;
+          
+            case "Jul":
+                my_month = "07";
+            break;
+          
+            case "Aug":
+                my_month = "08";
+            break;
+          
+            case "Sep":
+                my_month = "09";
+            break;
+          
+            case "Oct":
+                my_month = "10";
+            break;
+          
+            case "Nov":
+                my_month = "11";
+            break;  
+          
+            case "Dec":
+                my_month = "12";
+            break;  
+            default:
+            // code block
+        }
+
+       // document.getElementById("myDate").value = my_year + "-" +  my_month+ "-" + my_day;
+
+        document.getElementById("myDate3").value = my_year + "-" +  my_month+ "-" + my_day;
+
+            
+
+        //--------------------------------
+        
+        //------------------------------- HIDE
+        document.getElementById("txtPaste2").style.visibility= "hidden";
+        PasteVisible2 = false;
+        $("#btnPaste2").css("background-color", "#ffffff"); 
+
+         return true;
+         //-------------------------------
+    }   
+    else if(res.length == 5) { // SECOND Format "Mon 1/6 6:50 pm EST" _______________________________________________________________
+   
+
+    //res[0] = "Sat,"
+    //res[1] = "Feb,"
+    //res[2] = "29"
+    //res[3] = "@"
+    //res[4] = "9:14"
+    //res[5] = "pm"
+    //res[6] = "EST"
+
+    //res[0] = "Mon"
+    //res[1] = "1/6"
+    //res[2] = "6:50"
+    //res[3] = "pm"
+    //res[4] = "EST"
+    
+
+        var time_mine = res[2];
+
+        if (res[3] =="pm") {
+            var res2 = time_mine.split(":");
+            var suma;
+
+            if (res2[0] == "12") { // is 12:00 pm
+                suma = parseInt(res2[0]);
+            }
+            else { // is not 12:00 pm
+                suma = parseInt(res2[0]) + 12;
+            }
+       
+            time_mine = suma + ":" + res2[1];
+        }
+        else { //am
+
+            var res3 = time_mine.split(":");
+            var addition ="";
+
+            if (res3[0].length == 1) {//1 digit hour
+                addition = "0" + res3[0];
+                //alert("1 digit");
+            }
+            else {//2 digits hour
+            
+                if (res3[0]=="12") {// is 12:00 am
+                    addition = "00";    
+                }
+                else{
+                    addition = "" + res3[0];
+                }
+                //alert("2 digit");
+            }
+
+            time_mine = addition + ":" + res3[1];
+        }
+
+        
+        document.getElementById("myTime3").value = time_mine;
+
+
+        //------------------- DATE                       
+        //res[1] = "Feb"
+        //res[2] = "29"
+
+        var my_year = document.getElementById("myDate").value;
+        
+        my_year  = my_year.substring(4, 0); // 2020
+
+        
+        //>>>>>>>>>>>>>>>
+        var spl = res[1].split("/");
+        // spl[0] = 1     = month
+        // spl[1] = 6     = day
+
+        var my_month = spl[0];
+        var my_day = spl[1];
+
+        if (my_day.length == 1) {
+           my_day = "0" + my_day;
+        }
+        
+
+        if (my_month.length == 1) {
+           my_month = "0" + my_month;
+        }
+
+
+
+
+        document.getElementById("myDate3").value = my_year + "-" +  my_month+ "-" + my_day;
+
+            
+      
+
+        //------------------------------- HIDE
+        document.getElementById("txtPaste2").style.visibility= "hidden";
+        PasteVisible2 = false;
+        $("#btnPaste2").css("background-color", "#ffffff");
+
+         return true;
+         //-------------------------------
+    }
+
+
+  document.getElementById("txtPaste2").value = "Invalid Format";
+
+    return false;
+}
+
+
+//--------------------------------------------------------------------------------------------------------------------
+document.getElementById("txtPaste1").addEventListener("paste", function(e){
+var clipboardData, pastedData;
+// Get pasted data via clipboard API
+clipboardData = e.clipboardData || window.clipboardData;
+pastedData = clipboardData.getData('Text');
+var inputOk = checkInput(pastedData);
+if(!inputOk){
+  e.preventDefault();
+}
+});
+
+document.getElementById("txtPaste1").addEventListener("keypress", function(e){
+ 
+
+  var inputOk = checkInput(e.key);
+  if(!inputOk){
+    e.preventDefault();
+  }
+
+
+});
+//--------------------------------------------------------------------------------------------------------------------
+
+function checkInput(value){ // HERE MY ONPASTE EVENT
+
+
+
+
+
+    var res = value.split(" ");
+    //res[0] = "Sat,"
+    //res[1] = "Feb,"
+    //res[2] = "29"
+    //res[3] = "@"
+    //res[4] = "9:14"
+    //res[5] = "pm"
+    //res[6] = "EST"
+
+   // alert(res.length);
+
+    if (res.length == 7) { // First Format "Sat, Feb 29 @ 9:14 pm EST" _______________________________________________________________
+
+
+        var time_mine = res[4];
+
+        if (res[5] =="pm") {
+            var res2 = time_mine.split(":");
+            var suma;
+
+            if (res2[0] == "12") { // is 12:00 pm
+                suma = parseInt(res2[0]);
+            }
+            else { // is not 12:00 pm
+                suma = parseInt(res2[0]) + 12;
+            }
+       
+            time_mine = suma + ":" + res2[1];
+        }
+        else { //am
+
+            var res3 = time_mine.split(":");
+            var addition ="";
+
+            if (res3[0].length == 1) {//1 digit hour
+                addition = "0" + res3[0];
+                //alert("1 digit");
+            }
+            else {//2 digits hour
+            
+                if (res3[0]=="12") {// is 12:00 am
+                    addition = "00";    
+                }
+                else{
+                    addition = "" + res3[0];
+                }
+                //alert("2 digit");
+            }
+
+            time_mine = addition + ":" + res3[1];
+        }
+
+        //alert(time_mine);
+        document.getElementById("myTime").value = time_mine;
+
+        //------------------- DATE                       
+        //res[1] = "Feb"
+        //res[2] = "29"
+
+        var my_year = document.getElementById("myDate").value;
+        
+        my_year  = my_year.substring(4, 0); // 2020
+
+        var my_month = "";
+
+        var my_day = res[2];
+
+        if (my_day.length == 1) {
+           my_day = "0" + my_day;
+        }
+        
+
+
+        switch(res[1]) {
+            case "Jan":
+                my_month = "01";
+            break;
+          
+            case "Feb":
+                my_month = "02";
+            break;
+          
+            case "Mar":
+                my_month = "03";
+            break;
+          
+            case "Apr":
+                my_month = "04";
+            break;
+          
+            case "May":
+                my_month = "05";
+            break;
+          
+            case "Jun":
+                my_month = "06";
+            break;
+          
+            case "Jul":
+                my_month = "07";
+            break;
+          
+            case "Aug":
+                my_month = "08";
+            break;
+          
+            case "Sep":
+                my_month = "09";
+            break;
+          
+            case "Oct":
+                my_month = "10";
+            break;
+          
+            case "Nov":
+                my_month = "11";
+            break;  
+          
+            case "Dec":
+                my_month = "12";
+            break;  
+            default:
+            // code block
+        }
+
+        document.getElementById("myDate").value = my_year + "-" +  my_month+ "-" + my_day;
+
+        document.getElementById("myDate3").value = my_year + "-" +  my_month+ "-" + my_day;
+
+            
+
+        //--------------------------------
+        switch(res[6]) {
+           case "HST":
+                document.getElementById("selectTimeZone").selectedIndex = 0;
+            break;
+          
+            case "AKDT":
+                document.getElementById("selectTimeZone").selectedIndex = 1;
+            break;
+          
+            case "PDT":
+            case "PST":
+                document.getElementById("selectTimeZone").selectedIndex = 2;
+            break;
+          
+            case "MST":
+                document.getElementById("selectTimeZone").selectedIndex = 3;
+            break;
+          
+            case "MDT":
+                document.getElementById("selectTimeZone").selectedIndex = 4;
+            break;
+          
+            case "CST":
+                document.getElementById("selectTimeZone").selectedIndex = 5;
+            break;
+              
+            case "CDT":
+                document.getElementById("selectTimeZone").selectedIndex = 6;
+            break;
+          
+            case "EDT": 
+            case "EST":
+                document.getElementById("selectTimeZone").selectedIndex = 7;
+            break;
+
+            default:
+            // code block
+        }
+        fncChangeSelect();
+
+        //------------------------------- HIDE
+        document.getElementById("txtPaste1").style.visibility= "hidden";
+        PasteVisible1 = false;
+        $("#btnPaste1").css("background-color", "#ffffff");
+
+
+         return true;
+         //-------------------------------
+    }   
+    else if(res.length == 5) { // SECOND Format "Mon 1/6 6:50 pm EST" _______________________________________________________________
+   
+
+    //res[0] = "Sat,"
+    //res[1] = "Feb,"
+    //res[2] = "29"
+    //res[3] = "@"
+    //res[4] = "9:14"
+    //res[5] = "pm"
+    //res[6] = "EST"
+
+    //res[0] = "Mon"
+    //res[1] = "1/6"
+    //res[2] = "6:50"
+    //res[3] = "pm"
+    //res[4] = "EST"
+    
+
+        var time_mine = res[2];
+
+        if (res[3] =="pm") {
+            var res2 = time_mine.split(":");
+            var suma;
+
+            if (res2[0] == "12") { // is 12:00 pm
+                suma = parseInt(res2[0]);
+            }
+            else { // is not 12:00 pm
+                suma = parseInt(res2[0]) + 12;
+            }
+       
+            time_mine = suma + ":" + res2[1];
+        }
+        else { //am
+
+            var res3 = time_mine.split(":");
+            var addition ="";
+
+            if (res3[0].length == 1) {//1 digit hour
+                addition = "0" + res3[0];
+                //alert("1 digit");
+            }
+            else {//2 digits hour
+            
+                if (res3[0]=="12") {// is 12:00 am
+                    addition = "00";    
+                }
+                else{
+                    addition = "" + res3[0];
+                }
+                //alert("2 digit");
+            }
+
+            time_mine = addition + ":" + res3[1];
+        }
+
+        
+        document.getElementById("myTime").value = time_mine;
+
+
+        //------------------- DATE                       
+        //res[1] = "Feb"
+        //res[2] = "29"
+
+        var my_year = document.getElementById("myDate").value;
+        
+        my_year  = my_year.substring(4, 0); // 2020
+
+        
+        //>>>>>>>>>>>>>>>
+        var spl = res[1].split("/");
+        // spl[0] = 1     = month
+        // spl[1] = 6     = day
+
+        var my_month = spl[0];
+        var my_day = spl[1];
+
+        if (my_day.length == 1) {
+           my_day = "0" + my_day;
+        }
+        
+
+        if (my_month.length == 1) {
+           my_month = "0" + my_month;
+        }
+
+
+
+        document.getElementById("myDate").value = my_year + "-" +  my_month+ "-" + my_day;
+
+        document.getElementById("myDate3").value = my_year + "-" +  my_month+ "-" + my_day;
+
+//            alert(res[4].substring(0,3));
+        //--------------------------------
+        switch(res[4].substring(0,3)) {
+            case "HST":
+                document.getElementById("selectTimeZone").selectedIndex = 0;
+            break;
+          
+            case "AKD":
+                document.getElementById("selectTimeZone").selectedIndex = 1;
+            break;
+          
+            case "PDT":
+            case "PST":
+                document.getElementById("selectTimeZone").selectedIndex = 2;
+            break;
+          
+            case "MST":
+                document.getElementById("selectTimeZone").selectedIndex = 3;
+            break;
+          
+            case "MDT":
+                document.getElementById("selectTimeZone").selectedIndex = 4;
+            break;
+          
+            case "CST":
+                document.getElementById("selectTimeZone").selectedIndex = 5;
+            break;
+              
+            case "CDT":
+                document.getElementById("selectTimeZone").selectedIndex = 6;
+            break;
+          
+            case "EDT": 
+            case "EST":
+                document.getElementById("selectTimeZone").selectedIndex = 7;
+            break;
+
+            default:
+            // code block
+        }
+        fncChangeSelect();
+        //------------------------------- HIDE
+        document.getElementById("txtPaste1").style.visibility= "hidden";
+        PasteVisible1 = false;
+        $("#btnPaste1").css("background-color", "#ffffff");
+
+         return true;
+         //-------------------------------
+    }
+
+
+  document.getElementById("txtPaste1").value = "Invalid Format";
+
+    return false;
+}
+
+//--------------------------------------------------------------------
+function fncPaste1(){
+
+    if (PasteVisible1) { // hide
+        document.getElementById("txtPaste1").style.visibility= "hidden";
+        PasteVisible1 = false;
+        $("#btnPaste1").css("background-color", "#ffffff");
+
+    }
+    else  { // show
+        document.getElementById("txtPaste1").style.visibility= "visible";
+        PasteVisible1 = true;
+        $("#btnPaste1").css("background-color", "#999999");
+        document.getElementById("txtPaste1").focus();
+
+      document.getElementById("txtPaste1").select();
+
+
+    }  
+    
+
+}
+
+function fncPaste2(){
+
+    if (PasteVisible2) { // hide
+        document.getElementById("txtPaste2").style.visibility= "hidden";
+        PasteVisible2 = false;
+        $("#btnPaste2").css("background-color", "#ffffff");
+
+    }
+    else  { // show
+        document.getElementById("txtPaste2").style.visibility= "visible";
+        PasteVisible2 = true;
+        $("#btnPaste2").css("background-color", "#999999");
+        document.getElementById("txtPaste2").focus();
+    }  
+    
+
+}
+
+
+
+
+function fncChangeCheck(){
+
+if (BoxChecked) {// hide
+
+    BoxChecked = false;
+
+    document.getElementById("table2").style.visibility= "hidden";
+    document.getElementById("panel1").style.height = "88px";
+
+    document.getElementById("btnCompare").style.top ="168px";
+    document.getElementById("txtDiff").style.top ="198px";
+    document.getElementById("demo").style.top ="210px";
+
+    document.getElementById("btnCompare").innerHTML = "Compare to Now";
+
+
+  PasteVisible2 = false;
+  $("#btnPaste2").css("background-color", "#ffffff");
+        document.getElementById("txtPaste2").style.visibility= "hidden";
+
+
+//    alert(document.getElementById("btnCompare").style.top  );
+
+}
+else{ // show
+
+    BoxChecked = true;
+
+    document.getElementById("table2").style.visibility= "visible";
+
+
+    document.getElementById("panel1").style.height = "150px";
+
+    document.getElementById("btnCompare").style.top ="230px";
+    document.getElementById("txtDiff").style.top ="260px";
+    document.getElementById("demo").style.top ="272px";
+
+      document.getElementById("btnCompare").innerHTML = "Compare to New";       
+
+
+document.getElementById("myTime3").focus(); 
+
+
+    //document.getElementById("panel1").style.visibility= "visible";
+
+}
+
+
+
+}
+
+        function tabGreenClick(){
+                document.getElementById("panel1").style.backgroundImage= "-webkit-linear-gradient(top, #00b300, #66ff66)";
+                document.getElementById("btnCompare").style.backgroundImage= "-webkit-linear-gradient(top, #00b300, #66ff66)";
+
+ document.getElementById("Date1").innerHTML = "Date 1:";
+ document.getElementById("Time1").innerHTML = "Time 1:";
+
+ document.getElementById("Date2").innerHTML = "Date 2:";
+ document.getElementById("Time2").innerHTML = "Time 2:";            
+      
+      document.getElementById("Time1").focus();     
+PanelSelected=3;
+        }
+        
+
+        function tabBlueClick(){
+                document.getElementById("panel1").style.backgroundImage= "-webkit-linear-gradient(top, #0059b3, #66b3ff)";
+                document.getElementById("btnCompare").style.backgroundImage= "-webkit-linear-gradient(top, #0059b3, #66b3ff)";
+ document.getElementById("Date1").innerHTML = "Date:";
+ document.getElementById("Time1").innerHTML = "Original ETA:";
+
+ document.getElementById("Date2").innerHTML = "Date:";
+ document.getElementById("Time2").innerHTML = "Fulfilled at:";            
+
+        document.getElementById("Time1").focus();           
+            PanelSelected=1;
+        }
+        
+
+        function tabRedClick(){
+                  document.getElementById("panel1").style.backgroundImage= "-webkit-linear-gradient(top, #b30000, #ff6666)";
+                  document.getElementById("btnCompare").style.backgroundImage= "-webkit-linear-gradient(top, #b30000, #ff6666)";
+
+ document.getElementById("Date1").innerHTML = "Date:";
+ document.getElementById("Time1").innerHTML = "Placed at:";
+
+ document.getElementById("Date2").innerHTML = "Date:";
+ document.getElementById("Time2").innerHTML = "Cancelled at:";       
+
+   document.getElementById("Time1").focus();   
+ PanelSelected=2;     
+
+
+        }
+
+
+
+        function fncChange()
+        {
+         
+                document.getElementById("Time1").focus();    
+
+        }
+
+
+        function calcDifference()
+        {
+
+            document.getElementById("demo").innerHTML = "";
+
+            // index of Time Type
+            
+
+            if (PanelSelected == 1 || PanelSelected == 2 || PanelSelected == 3  )  // 0 | 1 | 2
+            {
+          
+                // index of Time Zone
+                var indexTimeZone = document.getElementById("selectTimeZone").selectedIndex;
+
+                //Split the 
+                //  00:00   -  23.59 
+                var dateONE = document.getElementById("myTime").value;
+                //  12:00 am HST  - 11:59 pm HST
+                var dateTWO = document.getElementById("txtTime" + (parseInt(indexTimeZone) +1) ).value;
+
+               // alert(dateTWO);
+               // alert(document.getElementById("myTime3").value);
+
+                //                                  0  1 
+                var temp1 = dateONE.split(":"); // [15,30]
+                //temp1[0] = 15   |  temp1[1] = 30
+
+
+                //                                  0   1     
+                var temp2 = dateTWO.split(":"); // [04,11 pm HST]
+
+                
+
+                                                   //  0  1  2     
+                var temp2_1 = temp2[1].split(" "); // [11,pm,HST]
+
+                //temp2[0] = 04  |  temp2_1[0] = 11 | temp2_1[1] = pm
+
+
+                //base on temp2
+                var HOUR_AM_PM ;
+
+                //    pm
+                if (temp2_1[1] == "pm") 
+                {
+                    if (temp2[0] == "12") {// is 12
+                        HOUR_AM_PM = parseInt(temp2[0]) ;
+                    }
+                    else{// not 12
+                                              //                              4                                
+                        HOUR_AM_PM = parseInt(temp2[0]) + 12;
+
+                        if (HOUR_AM_PM.length == 1) 
+                        {
+                           HOUR_AM_PM = "0" + HOUR_AM_PM; 
+                        }
+                    }
+                }
+                else //am
+                {
+                    HOUR_AM_PM = temp2[0];
+                    // If 12 am = 00 hour
+                    if (HOUR_AM_PM == 12) 
+                    {
+                        HOUR_AM_PM = "00";
+                    }
+                }
+
+               
+
+                //strings
+                var strMilHour1 = temp1[0];
+                var strMilHour2 = HOUR_AM_PM;
+
+                //ints
+                var theTime1 = parseInt(temp1[0])
+                var theTime2 = parseInt(HOUR_AM_PM)
+
+                //DATES 2
+                var date = [];
+
+                date[0] = moment().tz('Pacific/Honolulu').format("YYYY-MM-DD");
+                date[1] = moment().tz('America/Anchorage').format("YYYY-MM-DD");   //
+                date[2] = moment().tz('America/Los_Angeles').format("YYYY-MM-DD");   //
+                date[3] = moment().tz('America/Phoenix').format("YYYY-MM-DD");   //
+                date[4] = moment().tz('America/Denver').format("YYYY-MM-DD");   //
+                date[5] = moment().tz('America/Tegucigalpa').format("YYYY-MM-DD");   //
+                date[6] = moment().tz('America/Chicago').format("YYYY-MM-DD");   //
+                date[7] = moment().tz('America/New_York').format("YYYY-MM-DD");   //
+
+                
+
+                
+                var dateStr2 ;
+
+                    if (BoxChecked) {//here
+                        dateStr2 =  document.getElementById("myDate3").value + " " + document.getElementById("myTime3").value + ":00";
+                    }
+                    else{
+                        dateStr2 =  date[indexTimeZone] + " " +  strMilHour2 + ":" + temp2_1[0]+ ":00";
+                    }
+
+                 //   alert(dateStr2);
+     
+                    
+
+                var dateStr1 = document.getElementById("myDate").value + " " + dateONE;
+             
+                var date1 = moment( dateStr1 );
+                var date2 = moment( dateStr2 );
+
+                differenceInMs = date2.diff(date1); // diff yields milliseconds
+
+                duration = moment.duration(differenceInMs); 
+
+                // THISONE UP 
+                differenceInMinutes = duration.asMinutes(); // if you would like to have the output 559
+
+
+                var x = duration;
+
+                //PT24H // Late: 1 day
+                
+                //P0D  //Same hour and minute
+                
+                //PT1M  // Late: 1 minute
+                //PT1H  //Late: 1 hour
+                //PT1H1M  //Late: 1 hour and 1 minute
+
+                //-PT1H // On_Time: 1 hour
+                //-PT1M // On_Time: 1 minute
+                //-PT1H1M  //On_Time 1 hour and 1 minute
+
+                w = x.toString();
+                
+                z =  x.toString();
+
+                var h = "0";
+                var m = "0";
+
+                var y = "";
+
+                if (w == "P0D")  // Same Time
+                {
+                    y = "Same Time 'Late'";
+
+                    // if Original ETA
+                    if (PanelSelected == 1) 
+                    {
+                        document.getElementById("demo").innerHTML =   "Concession: $0";
+
+                    }
+                    else if (PanelSelected == 2) //If Placed @
+                    {
+                        document.getElementById("demo").innerHTML = "Concession: $0";
+                    }
+                }
+                else if(w.charAt(0) == "-") // On_Time
+                { 
+                    w = w.replace("-", ""); 
+                    w = w.replace("M", " M ");  
+                    w = w.replace("H", " H ");
+                    w = w.replace("PT", "");
+
+                    y = "On Time by " + w;
+                }
+                else if(w.charAt(0) == "P")// LATE
+                {   
+                    
+                    // contains H
+                    //z = PT1H1M
+                    var charIndex = 1;
+                    var charIndex2;
+
+                    if (z.includes("H")) 
+                    {
+                        charIndex = z.indexOf("H"); 
+                        h = z.substring(2, charIndex);
+                    }
+                    if (z.includes("M")) 
+                    {
+                        charIndex2 = z.indexOf("M"); 
+                        m = z.substring(charIndex + 1, charIndex2);
+                    }
+
+                    // how many minutes late
+                    var totalMinutes = (parseInt(h) * 60 ) + parseInt(m) ;
+
+                    var CancelledCons;
+
+                    if (totalMinutes <= 10) 
+                    {
+                        CancelledCons = "$0";
+                    }
+                    else if (totalMinutes <= 20) 
+                    {
+                        CancelledCons = "$5 or %10";
+                    }
+                    else if (totalMinutes <= 30)
+                    {
+                        CancelledCons = "$10 or %20";
+                    }
+                    else
+                    {
+                        CancelledCons = "[Full value of order] up to: $25 or %50";
+                    }
+
+                    var LateCons;
+                
+                    if (totalMinutes <= 15) 
+                    {
+                        LateCons = "0";
+                    }
+                    else if (totalMinutes <= 45)
+                    {
+                        LateCons = "5 or %10";
+                    }
+                    else
+                    {
+                        LateCons = "10 or %20";
+                    }
+
+
+                    // if Original ETA
+                    if (PanelSelected == 1) 
+                    {
+                        document.getElementById("demo").innerHTML =   "Concession: $" + LateCons  ;
+                    }
+                    else if (PanelSelected == 2) //If Placed @
+                    {
+                        document.getElementById("demo").innerHTML = "Concession: " + CancelledCons ;
+                    }
+
+                    w = w.replace("M", " M ");  
+                    w = w.replace("H", " H ");
+                    w = w.replace("PT", "");
+
+                    y = "Late by " + w;
+                }
+                document.getElementById("txtDiff").value = y ;
+            }
+            else // 2
+            { 
+              //  calcDifference2();
+            }
+        }
+/*
+        function calcDifference2()
+        {
+            document.getElementById("demo").innerHTML = "";
+
+            //Split the 
+            //  00:00   -  23.59 
+            var dateONE = document.getElementById("myTime").value;
+            //  12:00 am HST  - 11:59 pm HST
+            var dateTWO = document.getElementById("myTime3").value;
+
+            var dateStr1 = document.getElementById("myDate").value + " " + dateONE;
+ 
+            var dateStr2 = document.getElementById("myDate3").value + " " + dateTWO;
+ 
+            //DATES 
+            var date1 = moment( dateStr1 );
+            var date2 = moment( dateStr2 );
+
+            differenceInMs = date2.diff(date1); // diff yields milliseconds
+
+            duration = moment.duration(differenceInMs); 
+
+            // THISONE UP 
+            differenceInMinutes = duration.asMinutes(); // if you would like to have the output 559
+
+            var x = duration;
+
+            w = x.toString();
+        
+            z =  x.toString();
+
+            var h = "0";
+            var m = "0";
+
+            var y = "";
+
+            if (w == "P0D")  // Same Time
+            {
+                y = "Same Time 'Late'";
+    
+                // if Original ETA
+                if (PanelSelected == 1) 
+                {
+                    document.getElementById("demo").innerHTML =   "Concession if Late: $0";
+                }
+                else if (PanelSelected == 2) //If Placed @
+                {
+                    document.getElementById("demo").innerHTML = "Concession if Cancelled: $5";
+                }
+            }
+            else if(w.charAt(0) == "-") // On_Time
+            { 
+
+                w = w.replace("-", ""); 
+                w = w.replace("M", " M ");  
+                w = w.replace("H", " H ");
+                w = w.replace("PT", "");
+
+                y = "On Time by " + w;
+            }
+            else if(w.charAt(0) == "P") // LATE
+            {
+
+                // contains H
+                //z = PT1H1M
+                var charIndex = 1;
+                var charIndex2;
+
+                if (z.includes("H")) 
+                {
+                    charIndex = z.indexOf("H"); 
+                    h = z.substring(2, charIndex);
+                }
+
+                if (z.includes("M")) 
+                {
+                    charIndex2 = z.indexOf("M"); 
+                m = z.substring(charIndex + 1, charIndex2);
+                }
+
+                // how many minutes late
+                var totalMinutes = (parseInt(h) * 60 ) + parseInt(m) ;
+
+                var CancelledCons;
+                if (totalMinutes <= 20) 
+                {
+                    CancelledCons = "$5";
+                }
+                else if (totalMinutes <= 30)
+                {
+                    CancelledCons = "$10";
+                }
+                else
+                {
+                    CancelledCons = "Full value of order up $25";
+                }
+
+                var LateCons;
+            
+                if (totalMinutes <= 15) 
+                {
+                    LateCons = "0";
+                }
+                else if (totalMinutes <= 45)
+                {
+                    LateCons = "5";
+                }
+                else
+                {
+                    LateCons = "10";
+                }
+
+                w = w.replace("M", " M ");  
+                w = w.replace("H", " H ");
+                w = w.replace("PT", "");
+
+                y = "Late by " + w;
+            }
+            
+            document.getElementById("txtDiff").value = y ;
+        }
+*/
+        function myUpdate() 
+        {
+
+            //format("YYYY-MM-DD");   
+            var time1 = moment().tz('Pacific/Honolulu').format("hh:mm a z");
+            var time2 = moment().tz('America/Anchorage').format("hh:mm a z");   //
+            var time3 = moment().tz('America/Los_Angeles').format("hh:mm a z");   //
+            var time4 = moment().tz('America/Phoenix').format("hh:mm a z");   //
+            var time5 = moment().tz('America/Denver').format("hh:mm a z");   //
+            var time6 = moment().tz('America/Tegucigalpa').format("hh:mm a z");   //
+            var time7 = moment().tz('America/Chicago').format("hh:mm a z");   //
+            var time8 = moment().tz('America/New_York').format("hh:mm a z");   //
+
+            /*
+            Pacific/Honolulu
+            HST
+            America/Anchorage
+            AKDT
+            America/Los_Angeles
+            PDT
+            America/Phoenix
+            MST
+            America/Salt_Lake_City
+            MDT
+            America/Tegucigalpa
+            CST
+            America/Chicago
+            CDT
+            America/New_York
+            EDT
+            */
+
+           document.getElementById("txtTime1").value = time1  ;
+           document.getElementById("txtTime2").value = time2  ;
+           document.getElementById("txtTime3").value = time3  ;
+           document.getElementById("txtTime4").value = time4  ;
+           document.getElementById("txtTime5").value = time5  ;
+           document.getElementById("txtTime6").value = time6  ;
+           document.getElementById("txtTime7").value = time7  ;
+           document.getElementById("txtTime8").value = time8  ;
+        }
+
+       
+       
+        </script>
+    </body>
+</html>
